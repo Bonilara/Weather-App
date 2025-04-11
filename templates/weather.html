@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{city}}</title>
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet"/>
+</head>
+<body>
+    <h1>Weather in {{city}}</h1>
+    <p>Todays weather is {{m_weather}} with {{weather_desc}}</p>
+    <p>Temperature is {{temp}}°C but feels like {{feels_like}}°C</p>
+    
+    <form action="/Weather">
+        <h3>Enter a city</h3>
+        <input type="text" name="city" id="city"/>
+        <input type="submit" name="Submit">
+    </form>
+</body>
+</html>
